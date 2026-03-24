@@ -1,0 +1,79 @@
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: poc_postgres
+    environment:
+      POSTGRES_DB: petitemaison
+      POSTGRES_USER: pmuser
+      POSTGRES_PASSWORD: pmpassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - poc_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pmuser -d petitemaison"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    container_name: poc_keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: dev-mem
+    command: start-dev
+    ports:
+      - "8080:8080"
+    networks:
+      - poc_network
+
+  auth-service:
+    build: ./auth-service
+    container_name: poc_auth_service
+    environment:
+      PORT: 3001
+      KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_REALM: petitemaison
+      KEYCLOAK_CLIENT_ID: poc-app
+    networks:
+      - poc_network
+    depends_on:
+      - keycloak
+    restart: on-failure
+
+  product-service:
+    build: ./product-service
+    container_name: poc_product_service
+    environment:
+      PORT: 3002
+      DATABASE_URL: postgresql://pmuser:pmpassword@postgres:5432/petitemaison
+      KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_REALM: petitemaison
+    networks:
+      - poc_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      auth-service:
+        condition: service_started
+    restart: on-failure
+
+  frontend:
+    build: ./frontend
+    container_name: poc_frontend
+    ports:
+      - "8443:8443"
+    networks:
+      - poc_network
+    depends_on:
+      - product-service
+
+volumes:
+  postgres_data:
+
+networks:
+  poc_network:
+    driver: bridge

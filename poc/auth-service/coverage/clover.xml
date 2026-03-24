@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1774308218637" clover="3.2.0">
+  <project timestamp="1774308218637" name="All files">
+    <metrics statements="66" coveredstatements="57" conditionals="40" coveredconditionals="20" methods="14" coveredmethods="9" elements="120" coveredelements="86" complexity="0" loc="66" ncloc="66" packages="3" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="21" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+      <file name="app.js" path="C:\Users\SZE11\Desktop\CESI\PetiteMaison_POC (1)\poc\auth-service\src\app.js">
+        <metrics statements="21" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.middleware">
+      <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="6" methods="5" coveredmethods="4"/>
+      <file name="metrics.js" path="C:\Users\SZE11\Desktop\CESI\PetiteMaison_POC (1)\poc\auth-service\src\middleware\metrics.js">
+        <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="6" methods="5" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes">
+      <metrics statements="29" coveredstatements="21" conditionals="26" coveredconditionals="11" methods="6" coveredmethods="3"/>
+      <file name="auth.js" path="C:\Users\SZE11\Desktop\CESI\PetiteMaison_POC (1)\poc\auth-service\src\routes\auth.js">
+        <metrics statements="29" coveredstatements="21" conditionals="26" coveredconditionals="11" methods="6" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="cond" truecount="2" falsecount="2"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
